@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="encabezado">
+      <h2 class="title">SPLI</h2>
+      <h2 class="title">TTER</h2>
+    </div>
+    <div class="card">
+      <!-- entrada de datos -->
+      <div class="card-input">
+        <div class="price">
+          <span class="name-price">Bill</span
+          ><span class="error-price">Can't be zero</span>
+        </div>
+
+        <div class="input__price">
+          <label for="price"
+            ><img src="./images/icon-dollar.svg" alt=""
+          /></label>
+          <input type="number" id="price" placeholder="0.00" class="number" />
+        </div>
+        <div class="input__select">
+          <h3 class="name-tip">Select Tip %</h3>
+          <div class="select__buttons">
+            <button class="btn-tip" value="5">5%</button>
+            <button class="btn-tip" value="10">10%</button>
+            <button class="btn-tip" value="15">15%</button>
+            <button class="btn-tip" value="25">25%</button>
+            <button class="btn-tip" value="50">50%</button>
+            <input
+              type="number"
+              id="custom"
+              placeholder="Custom"
+              class="custom number"
+              min="0"
+            />
+          </div>
+        </div>
+        <div class="input__people">
+          <div class="peoples">
+            <span class="name-people"> Number of People </span>
+            <span class="error-peoples">Can't be zero</span>
+          </div>
+          <div class="people__datos">
+            <label for="people"
+              ><img src="./images/icon-person.svg" alt=""
+            /></label>
+            <input type="number" id="people" min="1" step="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- resultado -->
+      <div class="card-results">
+        <div class="results__tip">
+          <div class="tip__datos">
+            <h3 class="name-tip-results">Tip Amount</h3>
+            <p class="per-person">/ person</p>
+          </div>
+          <p class="amount" id="tip-amount">$0.00</p>
+        </div>
+        <div class="results__total">
+          <div class="total__datos">
+            <h3 class="name-total-results">Total</h3>
+            <p class="per-person">/ person</p>
+          </div>
+          <p class="amount" id="total-amount">$0.00</p>
+        </div>
+        <button class="btn-reset" id="reset" disabled>RESET</button>
+      </div>
+    </div>
+  </body>
+</html>

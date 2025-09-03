@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --Color-Green-400: hsl(172, 67%, 45%);
+  --Color-Green-900: hsl(183, 100%, 15%); /* background results */
+  --Color-Grey-50: hsl(189, 47%, 97%);
+  --Color-Grey-200: hsl(185, 41%, 84%); /* background body */
+  --Color-Grey-400: hsl(184, 14%, 56%);
+  --Color-Grey-500: hsl(186, 14%, 43%); /* title's */
+  --Color-White: hsl(0, 100%, 100%); /* background card */
+  --card-item: 340px;
+  --gap: 10px;
+  --border: 4px;
+  --height-button: 36px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+input,
+button {
+  height: var(--height-button);
+  font-family: "Space Mono", monospace;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input[type="number"] {
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: right;
+  color: var(--Color-Green-900);
+  padding-right: 10px;
+  border-radius: var(--border);
+  border: none;
+}
+
+input:hover {
+  outline: 1px solid var(--Color-Green-400);
+  box-shadow: 0px 0px 5px var(--Color-Green-400);
+}
+
+/* quitando el scroll bar vertical en los input numericos */
+.number::-webkit-outer-spin-button,
+.number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Space Mono", monospace;
+  background-color: var(--Color-Grey-200);
+  place-items: center;
+}
+
+.encabezado {
+  text-align: center;
+  padding: 20px 0 40px;
+}
+
+.title {
+  color: var(--Color-Grey-900);
+  font-size: 0.6rem;
+  letter-spacing: 10px;
+  color: var(--Color-Green-900);
+}
+
+/* CONTENEDOR */
+.card {
+  background-color: var(--Color-White);
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px hsl(185, 41%, 84%);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: var(--gap);
+}
+
+/* ENTRADA DE DATOS */
+.card-input {
+  width: var(--card-item);
+  height: var(--card-item);
+  padding: 10px;
+}
+
+h3, span {
+  font-size: 0.54rem;
+  font-weight: 700;
+  color: var(--Color-Grey-500);
+  margin-bottom: 10px;
+}
+
+.input-price {
+  position: relative;
+}
+
+label {
+  padding-left: 10px;
+  position: absolute;
+  z-index: 2;
+}
+
+img {
+  width: 80%;
+}
+
+.input__select {
+  padding: 30px 0;
+}
+
+.select__buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.btn-tip {
+  width: 100px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--Color-White);
+  background-color: var(--Color-Green-900);
+  border-radius: var(--border);
+}
+
+.btn-active {
+  color: var(--Color-Green-900);
+  background-color: var(--Color-Green-400);
+}
+
+.select__buttons .custom {
+  width: 100px;
+}
+
+.price, .peoples {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-peoples, .error-price {
+  display: none;
+  color: red;
+}
+
+
+/* RESULTADOS */
+.card-results {
+  width: var(--card-item);
+  height: var(--card-item);
+  background-color: var(--Color-Green-900);
+  padding: 30px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.results__tip, .results__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.name-tip-results, .name-total-results {
+  color: var(--Color-White);
+  margin: 0;
+}
+
+.per-person {
+  font-size: 0.5rem;
+  color: var(--Color-Green-400);
+}
+
+.amount {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--Color-Green-400);
+}
+
+.btn-reset {
+  width: calc(100% - 60px);
+  height: var(--height-button);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--Color-Green-900);
+  background-color: var(--Color-Green-400);
+  border-radius: var(--border);
+  position: absolute;
+  bottom: 30px;
+}
+
+
+@media (max-width:749px) {
+  .card {
+    width: max-content;
+    flex-direction: column;
+  }
+}
